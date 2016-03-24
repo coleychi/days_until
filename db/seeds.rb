@@ -26,32 +26,32 @@ moshi.save!
 Day.create([
   {
     name: "Birthday",
-    date: DateTime.strptime("7/13/2016 12:00", "%m/%d/%Y %H:%M"), 
+    date: Date.new(2016, 7, 13), 
     description: "my birthday"
   },
   {
     name: "Christmas",
-    date: DateTime.strptime("12/25/2016 12:00", "%m/%d/%Y %H:%M"), 
+    date: Date.new(2016, 12, 25), 
     description: "Christmas 2016"
   },
   {
     name: "Summer",
-    date: DateTime.strptime("6/21/2016 12:00", "%m/%d/%Y %H:%M"), 
+    date: Date.new(2016, 6, 21),
     description: "First day of summer!"
   },
   {
     name: "End of March",
-    date: DateTime.strptime("3/31/2016 12:00", "%m/%d/%Y %H:%M"), 
+    date: Date.new(2016, 3, 31),
     description: "March is over"
   },
   {
     name: "Important Day",
-    date: DateTime.strptime("6/1/2016 12:00", "%m/%d/%Y %H:%M"), 
+    date: Date.new(2016, 6, 1),
     description: "I need to remember to do something this day"
   },
   {
     name: "School begins",
-    date: DateTime.strptime("9/5/2016 12:00", "%m/%d/%Y %H:%M"), 
+    date: Date.new(2016, 9, 6), 
     description: "First day of school"
   }
   ])

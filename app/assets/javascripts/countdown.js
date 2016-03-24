@@ -1,26 +1,19 @@
 window.onload = function() {
 
-  // grab necessary elements using jQuery
-  $day = $("#day");
-  $hour = $("#hour");
-  $minute = $("#minute");
-  $second = $("#second");
-
-  // grab date and save to $date variable
-  $date = $("#date").text();
-
-  // console.log($date); // confirms $date was grabbed
-
-  jsDate = Date.parse($date); // parses to javascript date 
-
-  // console.log(jsDate); // confirms date saved
-
-  // now = Date.now(); // saves current datetime to now variable
-
-
-
-
   var updateCountdown = function() {
+
+    // grab necessary elements using jQuery
+    $day = $("#day");
+    $hour = $("#hour");
+    $minute = $("#minute");
+    $second = $("#second");
+
+    // grab date and save to $date variable
+    $date = $("#date").text();
+    // console.log($date); // confirms $date was grabbed
+
+    jsDate = Date.parse($date);
+    // console.log(jsDate); // confirms date saved
 
     // now = new Date();
     now = Date.now(); // saves current datetime to now variable
@@ -56,6 +49,7 @@ window.onload = function() {
     setTimeout(updateCountdown, 1000);
 
   }; // closes updateCountdown
+
 
   // initial execution of function
   updateCountdown();
