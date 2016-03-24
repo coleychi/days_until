@@ -1,7 +1,27 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Day.create([
+  {
+    name: "Birthday",
+    date: DateTime.strptime("7/13/2016 12:00", "%m/%d/%Y %H:%M"), 
+    description: "my birthday"
+  },
+  {
+    name: "Christmas",
+    date: DateTime.strptime("12/25/2016 12:00", "%m/%d/%Y %H:%M"), 
+    description: "Christmas 2016"
+  },
+  {
+    name: "Summer",
+    date: DateTime.strptime("6/21/2016 12:00", "%m/%d/%Y %H:%M"), 
+    description: "First day of summer!"
+  }
+  ])
+
+nicole = User.find_by(id: 1)
+
+birthday = Day.find_by(name: "Birthday")
+christmas = Day.find_by(name: "Christmas")
+summer = Day.find_by(name: "Summer")
+
+nicole.days << birthday
+nicole.days << christmas
+nicole.days << summer

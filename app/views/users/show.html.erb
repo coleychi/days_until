@@ -1,0 +1,23 @@
+<!-- show.html.erb -->
+<h1>User Show</h1>
+
+<div id="container">
+
+	<% @user.days.each do |day| %>
+
+			<div class="item">
+				<span class="count"><a href="<%= @user.id %>/days/<%= day.id %>"><%= day.days_to(day.date) %></a></span>
+				Days until <%= day.name %> on <%= day.date.strftime("%B %d, %Y") %>
+
+				
+			</div>
+
+	<%#= day.name %>
+	<%#= day.id %>
+
+	<%#= link_to day.name, user_day_path(@user.id, day.id) %>
+
+	
+	<% end %>
+
+</div>
