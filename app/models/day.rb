@@ -27,8 +27,10 @@ class Day < ActiveRecord::Base
 
     if user_date > today_date
       @days_to = user_date - today_date
-    else
+    elsif today_date > user_date
       @days_to = today_date - user_date
+    else
+      puts "error"
     end
 
     @days_to = @days_to.to_i / 86400  ## dividing by 86400 because result returning in seconds

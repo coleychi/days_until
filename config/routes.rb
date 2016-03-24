@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   # devise_for :users, :controllers => { registrations: "registrations" }
 
-  root "users#index"   ## this will probably change. maybe a splash?
-
   resources :users do 
     resources :days 
   end
@@ -11,6 +9,13 @@ Rails.application.routes.draw do
   resources :days ## might delete this
 
   # get "/days" => "days#index" 
+
+  ## root for authenticated user
+  authenticated :user do
+    root "days#redirect_show", as: :authenticated_root 
+  end
+
+  root "days#index"   ## this will probably change. maybe a splash?
 
 
 end

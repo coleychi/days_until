@@ -1,0 +1,12 @@
+<!-- days/_form.html.erb -->
+
+<%= form_for @day do |form| %>
+
+	Name: <%= form.text_field :name %></br>
+	Date: <%= form.datetime_field :date %></br>
+	Description: <%= form.text_area(:description, size: "24x6") %></br>
+	<%= form.hidden_field :user_id, value: @user.id %>
+
+	<%= form.submit %>
+
+<% end %>
