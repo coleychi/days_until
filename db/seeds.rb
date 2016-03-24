@@ -1,3 +1,6 @@
+# User.delete_all
+# Day.delete_all
+
 Day.create([
   {
     name: "Birthday",
@@ -16,7 +19,7 @@ Day.create([
   }
   ])
 
-nicole = User.find_by(id: 1)
+nicole = User.find_by(id: 3)
 
 birthday = Day.find_by(name: "Birthday")
 christmas = Day.find_by(name: "Christmas")
