@@ -88,3 +88,39 @@ nav {
 	text-decoration: none;
 	color: #ffffff;
 }
+
+.day-form {
+/*	background-color: red;*/
+}
+
+.form-row {
+	width: 100%;
+/*	background-color: green;*/
+	margin-bottom: 0.3em;
+	display: block;
+}
+
+.form-label {
+	display: inline-block;
+	font-weight: bold;
+	width: 25%;
+/*	background-color: yellow;*/
+	vertical-align: top;
+	padding-right: 0.3em;
+	text-align: right;
+}
+.form-input-container {
+	display: inline-block;
+	width: 74%;
+	/*background-color: orange;*/
+}
+.form-input {
+	width: 100%;
+	resize: none;
+	padding: 0.5em;
+	border: 0;
+}
+
+.form-submit {
+	padding: 2em;
+}

@@ -1,12 +1,36 @@
 <!-- days/_form.html.erb -->
 
-<%= form_for @day do |form| %>
+<%= form_for @day, html: {class: "day-form"} do |form| %>
 
-	Name: <%= form.text_field :name %></br>
-	Date: <%= form.datetime_field :date %></br>
-	Description: <%= form.text_area(:description, size: "24x6") %></br>
+	<div class="form-row">
+		<%= form.label :name, class: "form-label" %>
+		<div class="form-input-container">
+			<%= form.text_field :name, class: "form-input" %>
+		</div>
+	</div>
+
+	<div class="form-row">
+		<%= form.label :date, class: "form-label" %>
+		<div class="form-input-container">
+			<%= form.datetime_field :date, class: "form-input" %>
+		</div>
+	</div>
+
+	<div class="form-row">
+		<%= form.label :description, class: "form-label" %>
+		<div class="form-input-container">
+			<%= form.text_area(:description, class: "form-input", size: "24x6") %>
+		</div>
+	</div>
+
 	<%= form.hidden_field :user_id, value: @user.id %>
 
-	<%= form.submit %>
+	<div class="form-row">
+
+		<center><%= form.submit class: "form-submit" %></center>
+	
+	</div>
 
 <% end %>
+
+
