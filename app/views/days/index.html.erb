@@ -1,7 +1,19 @@
 <!-- days/index.html.erb -->
 
+<!-- <div id="cover">
+</div> -->
+
+<div id="container">
+
 <% @all_days.each do |day| %>
 
-	<%= day.name %>
+	<div class="item">
+			<span class="count"><%= day.days_to(day.date) %></span>
+			
+			Days until <%= day.name %> on <%= day.date.strftime("%b %-d, %Y") %>
+	
+		</div>
 
 <% end %>
+
+</div>

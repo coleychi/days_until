@@ -17,8 +17,8 @@ moshi = User.new(
       last_name: "Goshi",
       username: "moshi",
       email: "moshi@moshi.com",
-      password: "moshi13",
-      password_confirmation: "moshi13"
+      password: "moshimoshi",
+      password_confirmation: "moshimoshi"
   )
   # nicole.skip_confirmation!
 moshi.save!

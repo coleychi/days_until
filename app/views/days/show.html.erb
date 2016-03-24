@@ -1,6 +1,16 @@
 <!-- days/show.html.erb -->
 
-<h1><%= @day.name %></h1>
+<!-- <h1><%= @day.name %></h1> -->
+
+<div id="slim-container">
+	<h2><%= @day.name %></h2>
+
+<!-- 	<span id="day"></span>
+	<span id="hour"></span>
+	<span id="minute"></span>
+	<span id="second"></span>
+
+	<p id="date"><%= @day.date %></p> -->
 
 <%= @day.days_to(@day.date) %>
 
@@ -16,6 +26,6 @@
 <%= link_to "edit", edit_user_day_path(@user.id, @day.id) %>
 <%= link_to "delete", @day, :method => "delete" %>
 <!-- <a href="<%= @day.id %>/edit">edit</a> -->
-edit delete
 
+</div>
 <%#= link_to day.name, user_day_path(@user.id, day.id) %>

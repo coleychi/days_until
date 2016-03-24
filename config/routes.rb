@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   # get "/days" => "days#index" 
 
   ## root for authenticated user
-  authenticated :user do
-    root "days#redirect_show", as: :authenticated_root 
-  end
+  # authenticated :user do
+  #   root "days#redirect_show", as: :authenticated_root 
+  # end
 
   root "days#index"   ## this will probably change. maybe a splash?
 
