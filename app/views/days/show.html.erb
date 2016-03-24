@@ -5,12 +5,15 @@
 <div id="slim-container">
 	<h2><%= @day.name %></h2>
 
-<!-- 	<span id="day"></span>
-	<span id="hour"></span>
-	<span id="minute"></span>
-	<span id="second"></span>
+	<div id="countdown-container">
 
-	<p id="date"><%= @day.date %></p> -->
+		<span id="day"></span>
+		<span id="hour"></span>
+		<span id="minute"></span>
+		<span id="second"></span>
+
+	<p id="date"><%= @day.date %></p>
+	</div>
 
 <%= @day.days_to(@day.date) %>
 

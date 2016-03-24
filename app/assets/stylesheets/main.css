@@ -128,3 +128,9 @@ nav {
 .form-submit {
 	padding: 2em;
 }
+
+#countdown-container {
+	/*background-color: green;*/
+	width: 50%;
+	margin: auto;
+}
