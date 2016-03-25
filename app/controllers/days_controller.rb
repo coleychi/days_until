@@ -67,7 +67,7 @@ class DaysController < ApplicationController
   def set_day
     @day = Day.find(params[:id])
     @user = User.find(params[:user_id]) ## need this for hidden field in form
-    # @days_to = Day.days_to(@day.date)
+    ## @days_to = Day.days_to(@day.date)
   end
 
 
