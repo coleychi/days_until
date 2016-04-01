@@ -40,8 +40,8 @@ Day.create([
     description: "First day of summer!"
   },
   {
-    name: "End of March",
-    date: Date.new(2016, 3, 31),
+    name: "End of April",
+    date: Date.new(2016, 4, 30),
     description: "March is over"
   },
   {
@@ -59,13 +59,13 @@ Day.create([
 birthday = Day.find_by(name: "Birthday")
 christmas = Day.find_by(name: "Christmas")
 summer = Day.find_by(name: "Summer")
-march = Day.find_by(name:"End of March")
+april = Day.find_by(name:"End of April")
 important = Day.find_by(name: "Important Day")
 school = Day.find_by(name: "School begins")
 
 nicole.days << birthday
 nicole.days << christmas
 nicole.days << summer
-moshi.days << march
+moshi.days << april
 moshi.days << important
 moshi.days << school
